@@ -15,7 +15,7 @@ public class ExtentReportBasic {
 
 	// Class for extent report ExtentReports ExtentTest
 	ExtentReports extent; // used to specify the name of report and location where we need to save it
-	ExtentTest test; // used to generate logs
+	ExtentTest test; // used to generate logs ,status info...
 
 	@BeforeTest
 	public void startReport() {

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="basic.ExtentReportBasic">
+      <class name="basic.ExtentReportWithScreenshot">
         <methods>
-          <include name="test2"/>
-          <include name="flush"/>
+          <include name="afterMethod"/>
           <include name="startReport"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- basic.ExtentReportBasic -->
+      </class> <!-- basic.ExtentReportWithScreenshot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
