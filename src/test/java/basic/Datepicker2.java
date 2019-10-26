@@ -27,6 +27,7 @@ public class Datepicker2 {
 		String month = "Dec 2019";
 		String day = "25";
 
+		
 		driver.findElement(By.id("hotel-checkin-hp-hotel")).click();
 
 		// Select month
@@ -45,11 +46,11 @@ public class Datepicker2 {
 		// WebElement
 		// e=driver.findElement(By.xpath("//*[@id=\"hotel-checkin-wrapper-hp-hotel\"]/div/div/div[2]/table/tbody/tr[4]/td[4]"));
 
-		//Select all dates and store in list
+		// Select all dates and store in list
 		List<WebElement> list = driver.findElements(
 				By.xpath("//*[@id=\"hotel-checkin-wrapper-hp-hotel\"]/div/div/div[2]/table/tbody/tr/td/button"));
 
-		//iterate and compare one by one
+		// iterate and compare one by one
 		for (WebElement w : list) {
 
 			// get text

@@ -28,58 +28,51 @@ public class ExtentReportBasic {
 
 		// load configuration file
 		// path of extent config file
-		//create extent-config xml file and store all configuration stuffs
+		// create extent-config xml file and store all configuration stuffs
 		extent.loadConfig(new File("./extent.config.xml"));
 
 	}
-	
-	//sample method to test pass
-	
+
+	// sample method to test pass
+
 	@Test
-	public void test1()
-	{
-		//first line
-		//parameter is name of test method
-		//creates node
-		test  = extent.startTest("test1");
-		
-		//Log any info in report
-		test.log(LogStatus.INFO,"STEP 1");
-		
+	public void test1() {
+		// first line
+		// parameter is name of test method
+		// creates node
+		test = extent.startTest("test1");
+
+		// Log any info in report
+		test.log(LogStatus.INFO, "STEP 1");
+
 		Assert.assertTrue(true);
-		
-		//log status to report using test ref variable
+
+		// log status to report using test ref variable
 		test.log(LogStatus.PASS, "Condition is passed");
-		
-		
+
 	}
-	
-	//ssmaple method to test fails
+
+	// ssmaple method to test fails
 	@Test
-	public void test2()
-	{
-		test  = extent.startTest("test2");
-		
-		test.log(LogStatus.INFO,"STEP 2");
+	public void test2() {
+		test = extent.startTest("test2");
+
+		test.log(LogStatus.INFO, "STEP 2");
 		Assert.assertTrue(false);
 		test.log(LogStatus.FAIL, "Condition is failed");
-		
+
 	}
-	
+
 	@AfterTest
-	public void flush()
-	{
-		//ends the test
+	public void flush() {
+		// ends the test
 		extent.endTest(test);
-		
-		//push data to report
+
+		// push data to report
 		extent.flush();
-		
-		//close the report
+
+		// close the report
 		extent.close();
 	}
-	
-	
-	
 
 }

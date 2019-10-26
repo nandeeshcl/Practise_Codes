@@ -24,7 +24,9 @@ public class DatePickerUsing_JS {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		// Action 1:To send value using ID
-		js.executeScript("document.getElementById('datepicker1').value='09/12/2017'");
+		js.executeScript("   document.getElementById('datepicker1').value='09/12/2017'    ");
+		
+		driver.quit();
 
 	}
 
