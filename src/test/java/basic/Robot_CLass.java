@@ -5,6 +5,8 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -22,6 +24,12 @@ public class Robot_CLass {
 		
 		driver.get("");
 		
+		//To press enter key
+		driver.findElement(By.xpath("")).sendKeys(Keys.ENTER);
+		
+		/*driver.findElement(By.xpath("")).sendKeys("726");
+		driver.findElement(By.xpath("")).sendKeys(Keys.ENTER);*/
+		
 		//Handle key events
 		Robot robot=new Robot();
 		
@@ -33,6 +41,8 @@ public class Robot_CLass {
 		
 		//Press Enter
 		robot.keyPress(KeyEvent.VK_ENTER);
+		
+		
 		
 
 	}
